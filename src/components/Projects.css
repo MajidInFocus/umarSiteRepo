@@ -1,0 +1,46 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.technologies {
+  margin: 1.5rem 0;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: #e9ecef;
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
