@@ -10,16 +10,14 @@ const About = () => {
         <div className="about-hero">
           <div className="about-image">
             <img 
-              src="/images/about-umar.jpg" 
+              src="/images/profileImage.png" 
               alt="Umar Sadique"
+              className="about-profile-image"
+              loading="lazy"
               onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'block';
+                console.log('About image failed to load');
               }}
             />
-            <div className="image-placeholder">
-              <p>About Photo Placeholder</p>
-            </div>
           </div>
           
           <div className="about-intro">

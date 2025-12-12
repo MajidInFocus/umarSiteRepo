@@ -8,30 +8,27 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
-          {/* Placeholder for full-width background image */}
           <img 
-            src="/images/hero-background.jpg" 
+            src="/images/background.png" 
             alt="Hero Background" 
             className="hero-bg-image"
+            loading="eager"
             onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'block';
+              e.target.src = '/images/background2.0.png';
             }}
           />
-          <div className="hero-bg-placeholder">
-            <p>Hero Background Image Placeholder</p>
-          </div>
           <div className="hero-overlay"></div>
         </div>
         
         <div className="hero-content">
           <div className="profile-photo-container">
             <img 
-              src="/images/umar-profile.jpg" 
+              src="/images/profileImage.png" 
               alt="Umar Sadique" 
               className="profile-photo"
+              loading="lazy"
               onError={(e) => {
-                e.target.src = '/images/profile-placeholder.png';
+                console.log('Profile image failed to load');
               }}
             />
           </div>

@@ -20,15 +20,44 @@
 
 .about-image {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.about-image img {
+.about-profile-image {
   width: 100%;
   max-width: 300px;
-  height: 400px;
+  height: auto;
+  aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-profile-image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive about image */
+@media (max-width: 1024px) {
+  .about-profile-image {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-profile-image {
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-profile-image {
+    max-width: 150px;
+  }
 }
 
 .image-placeholder {

@@ -13,7 +13,18 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="logo">
-          <Link to="/">Umar Sadique</Link>
+          <Link to="/">
+            <img 
+              src="/images/umarLogo.png" 
+              alt="Umar Sadique Logo" 
+              className="logo-image"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'inline';
+              }}
+            />
+            <span className="logo-text">Umar Sadique</span>
+          </Link>
         </div>
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul>

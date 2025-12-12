@@ -25,6 +25,33 @@
   color: #333;
   text-decoration: none;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  max-width: 40px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  display: inline;
+}
+
+/* Responsive logo */
+@media (max-width: 480px) {
+  .logo-image {
+    height: 35px;
+    max-width: 35px;
+  }
+  
+  .logo-text {
+    font-size: 1.3rem;
+  }
 }
 
 .logo a:hover {

@@ -36,3 +36,52 @@ p {
   margin-bottom: 1rem;
   line-height: 1.6;
 }
+
+/* Global responsive image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Responsive image utilities */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.responsive-image-contain {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Lazy loading optimization */
+img[loading="lazy"] {
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"]:not([src]) {
+  opacity: 0;
+}
+
+/* Image error handling */
+img[alt] {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Performance optimizations */
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Prevent layout shift */
+img {
+  contain: layout style paint;
+}
